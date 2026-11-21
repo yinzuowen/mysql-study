@@ -473,7 +473,7 @@ spring:
 
 ### 正确做法
 
-- 开启慢查询日志（见 [04-performance.md](../practice/04-performance.md)）。本机 `slow_query_log = 1`，但 `long_query_time` 是默认的 **10 秒**，对接口来说太宽松，一般设成 1 秒甚至更低。
+- 开启慢查询日志（见 [04-performance.sql](../practice/04-performance.sql)）。本机 `slow_query_log = 1`，但 `long_query_time` 是默认的 **10 秒**，对接口来说太宽松，一般设成 1 秒甚至更低。
 - 定期用 `mysqldumpslow` 或 `pt-query-digest` 汇总慢日志，找出最慢、执行最多的 SQL。
 - 应用侧记录 SQL 耗时（如 MyBatis 拦截器、APM 工具 SkyWalking），超过阈值就告警。
 - 新写的 SQL 上线前先用 `explain` 检查。
