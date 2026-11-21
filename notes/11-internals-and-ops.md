@@ -596,7 +596,7 @@ show global status where variable_name in (
 | `max_connections` | 默认 151。报 `Too many connections` 时，先查是不是连接泄漏或连接池配太大，再考虑调高 |
 | `wait_timeout` | 空闲连接多久被断开，默认 8 小时。连接池的空闲检测时间要比它短，否则会拿到已断开的连接 |
 | `Threads_running` | 正在干活的连接数，突然升高通常说明有慢 SQL 或锁等待 |
-| `Slow_queries` | 慢查询数量，配合慢查询日志（见 [04-performance.md](../practice/04-performance.md)）分析 |
+| `Slow_queries` | 慢查询数量，配合慢查询日志（见 [04-performance.sql](../practice/04-performance.sql)）分析 |
 
 ### 8.4 其他常用查询
 
