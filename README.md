@@ -29,11 +29,11 @@ mysql-study/
 | [第 10 章 后端开发常见坑](notes/10-backend-pitfalls.md) | SQL 注入、N+1、大事务、时区 | 🟢 |
 | [第 11 章 原理与运维](notes/11-internals-and-ops.md) | MVCC、日志、主从复制、分库分表 | ⚪ / 🟡 |
 
-性能分析与索引使用的详细示例（`explain` 实测结果）见 [04-performance.md](practice/04-performance.md)。
+性能分析与索引使用的详细示例（`explain` 实测结果）见 [04-performance.sql](practice/04-performance.sql)。
 
 ## 下一步
 
 1. 把 [schema.sql](data/schema.sql) 和 [t_user.sql](data/t_user.sql) 导入数据库，自己把 [01](practice/01-subquery.sql)、[02](practice/02-join-practice.sql) 里的查询改写一遍。
-2. 在 `t_user` 上建、删索引，用 `explain` 对比效果，对照 [04-performance.md](practice/04-performance.md) 里的结论。
+2. 在 `t_user` 上建、删索引，用 `explain` 对比效果，对照 [04-performance.sql](practice/04-performance.sql) 里的结论。
 3. 开两个终端窗口，各开一个事务，亲手复现一次脏读、不可重复读。
 4. 在自己的后端项目里，找一条列表查询，用 `explain` 看它有没有走索引。
