@@ -7,7 +7,7 @@
 > - `tmp_ch07_user`：复制自 [t_user](../data/t_user.sql)，24 行，索引有 `PRIMARY(id)`、`idx_user_name(name)`、`idx_user_phone(phone)` 唯一、`idx_profession_age_status(profession, age, status)`。
 > - `tmp_ch07_big`：50 万行，字段 `id, name, phone, age, city, create_time`，city 只有 5 种值。
 >
-> `explain` 的更多例子见 [04-performance.md](../practice/04-performance.md)。本机 `explain` 默认输出树形格式，本章都用 `explain format=traditional` 看表格。
+> `explain` 的更多例子见 [04-performance.sql](../practice/04-performance.sql)。本机 `explain` 默认输出树形格式，本章都用 `explain format=traditional` 看表格。
 
 ## 1. 没有索引为什么慢
 
@@ -432,7 +432,7 @@ where city in ('北京', '上海', '广州')   -- ALL（匹配 60%）
 
 ### 8.1 七条设计原则
 
-课程里的原文整理在 [04-performance.md 第 9 节](../practice/04-performance.md#9-索引设计原则)，下面逐条解释原因。
+课程里的原文整理在 [04-performance.sql](../practice/04-performance.sql) 第 9 节，下面逐条解释原因。
 
 **① 数据量较大、且查询比较频繁的表，才建索引**
 
